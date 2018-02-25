@@ -1,0 +1,24 @@
+[PROJECT]
+Target=projet_c.hex
+Processor_Text=PIC18F458
+CCSVerions=5.008
+Compiler=PCH
+CCSVersion=5.008
+[Target Data]
+FileList=projet_c.c
+[Directories]
+Include=D:\Programme Files (x86)\PICC\Devices\;D:\Programme Files (x86)\PICC\Drivers\;D:\EPHEC\2eme\semestre2\elec\;D:\EPHEC\2eme\semestre2\elec\D:\Programme Files (x86)\PICC\Devices\
+[D:\EPHEC\2eme\semestre2\elec\projet_c]
+Type=4
+[mru-list]
+1=projet_c.c
+[Opened Files]
+1=projet_c.c
+2=..\..\..\..\Programme Files (x86)\PICC\Devices\18F458.h
+3=
+4=
+[projet_c.c]
+Type=4
+[Units]
+Count=1
+1=projet_c (main)
