@@ -1,0 +1,4 @@
+>>> Warning 216 "main.c" Line 67(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC_9600_31766_31767)
+      Memory usage:   ROM=7%      RAM=2% - 6%
+      0 Errors,  1 Warnings.
+Build Successful.
