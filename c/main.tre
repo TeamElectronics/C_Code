@@ -1,17 +1,25 @@
 ÀÄmain
-   ÃÄMAIN  0/446  Ram=4
+   ÃÄMAIN  0/336  Ram=1
    ³  ÃÄ@cinit1  (Inline)  Ram=0
-   ³  ÃÄ@PSTRINGC_9600_31766_31767  0/36  Ram=2
-   ³  ÃÄ@ITOF  0/56  Ram=2
-   ³  ÃÄ@MULFF  0/244  Ram=11
-   ³  ÃÄ@DIVFF  0/348  Ram=14
-   ³  ÃÄ@FTOSD  0/64  Ram=5
-   ³  ÃÄ@PRINTF_L32U_656  0/166  Ram=12
+   ³  ÃÄ@PSTRINGC_9600_31766_31767  0/38  Ram=2
+   ³  ÃÄdist  0/208  Ram=12
+   ³  ³  ÃÄ@ITOF  0/56  Ram=2
+   ³  ³  ÃÄ@MULFF  0/244  Ram=11
+   ³  ³  ÃÄ@DIVFF  0/348  Ram=14
+   ³  ³  ÀÄ@FTOSD  0/64  Ram=5
+   ³  ÃÄ@delay_ms1  0/38  Ram=1
+   ³  ÃÄdist  0/208  Ram=12
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_L32U_9600_31766_31767  0/168  Ram=12
+   ³  ³  ÃÄ@DIV3232  0/142  Ram=13
+   ³  ³  ÀÄ@DIV3232  0/142  Ram=13
+   ³  ÃÄ@PRINTF_L32U_653  0/166  Ram=12
    ³  ³  ÃÄ@DIV3232  0/142  Ram=13
    ³  ³  ÃÄ@SPRINTF  0/30  Ram=1
    ³  ³  ÀÄ@DIV3232  0/142  Ram=13
-   ³  ÃÄ@PSTRINGC_9600_31766_31767  0/36  Ram=2
-   ³  ÀÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@PRINTF_L32U_9600_31766_31767  0/168  Ram=12
+   ³  ³  ÀÄ*
+   ³  ÀÄ@delay_ms1  0/38  Ram=1
    ÀÄRDA_isr  0/24  Ram=0
       ÀÄlecture  0/364  Ram=18
          ÃÄ@MUL3232  0/84  Ram=14

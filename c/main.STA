@@ -1,61 +1,62 @@
 
-ROM used:   2202/16384 (7%)
-            2202/16384 (7%) including unused fragments
+ROM used:   2466/16384 (8%)
+            2466/16384 (8%) including unused fragments
 
-            2.5 Average locations per line
-            43.2 Average locations per statement
+            2.8 Average locations per line
+            48.4 Average locations per statement
 
-RAM used:   32/1536 (2%) at main() level
-            104/1536 (7%) worst case
+RAM used:   34/1536 (2%) at main() level
+            106/1536 (7%) worst case
 
 Stack used: 5 worst case (2 in main + 3 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   76    51 100  main.c
+   96    51 100  main.c
    26     0   0  main.h
   766     0   0  ..\..\..\..\..\Programme Files (x86)\PICC\Devices\18F458.h
 ----- -----
-  868    51 Total
+  888    51 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     40   1    1             @delay_ms1
-0     24   1    0    24  1.5  RDA_isr
-0    446  10    4  1140  8.6  MAIN
-0      8   0    0   272  5.5  @const640
-0     36   1    2   351  7.0  @PSTRINGC_9600_31766_31767
-0     56   1    2   371  8.2  @ITOF
-0    244   6   11   231  6.6  @MULFF
-0    348   8   14   231  6.6  @DIVFF
-0     64   1    5   343  8.6  @FTOSD
-0     30   1    1   266  6.5  @SPRINTF
-0    142   3   13   797 10.6  @DIV3232
-0    166   4   12   315  6.5  @PRINTF_L32U_656
-0      4   0    0   797 10.6  @const664
-0    364   8   18   797 10.6  lecture
+0     38   1    1             @delay_ms1
+0     24   0    0    24  1.5  RDA_isr
+0    336   7    1   761  6.1  MAIN
+0     10   0    0   797 10.6  @const641
+0     38   1    2   908  6.6  @PSTRINGC_9600_31766_31767
+0    142   3   13             @DIV3232
+0    168   3   12             @PRINTF_L32U_9600_31766_31767
+0     30   1    1             @SPRINTF
+0    166   3   12             @PRINTF_L32U_653
+0    364   7   18   797 10.6  lecture
 0     84   2   14   797 10.6  @MUL3232
- Inline         0   797 10.6  @cinit1
+0    208   4   12   295  4.2  dist
+0     56   1    2   797 10.6  @ITOF
+0    244   5   11   797 10.6  @MULFF
+0    348   7   14             @DIVFF
+0     64   1    5   797 10.6  @FTOSD
+ Inline         0             @cinit1
 
 Program metrics:
-    Functions               15
+    Functions               10
     Statements              51
-    Comments                158
-    Volume (V)              12231
-    Difficulty (D)          118.5
-    Effort to implement (E) 1449827
-    Time to implement (T)   22 hours, 22 minutes
-    Est Delivered Bugs (B)  4
-    Cyclomatic Complexity   34
-    Maintainability (MI)    68
+    Comments                170
+    Volume (V)              10237
+    Difficulty (D)          81.0
+    Effort to implement (E) 829191
+    Time to implement (T)   12 hours, 48 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   21
+    Maintainability (MI)    113
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     0  4  
 00008-00094   142  0  
-00096-07FFE  2056  30562  
+00096-07FFE  2320  30298  
 
 
 

@@ -1,13 +1,22 @@
 #include <main.h>
 
 int32 lecture(void);
+int32 dist(void);
 int32 limite = 0;
+char temp[5];
 
 #INT_RDA
 void RDA_isr(void){
    //printf("p\r\n");
    limite = lecture();
    //printf("changement de limite");
+   /*if(limite>5){
+      output_low(pin_b1);
+      output_high(pin_b0);
+   }else{
+      output_high(pin_b1);
+      output_low(pin_b0);
+   }*/
 }
 
 void main(){
@@ -18,18 +27,10 @@ void main(){
    setup_low_volt_detect(FALSE);
    enable_interrupts(INT_RDA);
    enable_interrupts(GLOBAL);
-   float time=0;
    int32 distance=0;
-   printf("sjuygfb");
+   printf("sjuygfb\r\n");
    while(true){
-      output_high(pin_b7); //debut impulsion sur le trigger de la sonde ultrasons
-      delay_us(10);
-      output_low(pin_b7);//fin impulsion
-      while(!input(PIN_b3));//tant que la pin b3 est a low
-      set_timer1(0);//mise a 0 du timer 1
-      while(input(PIN_b3));//tant que la pin b3 est a high
-      time=get_timer1();//recupération du timer
-      distance = time*17/100;//calcul de la distance
+      distance = dist();
       if(distance<limite){//si la distance est assez grande
          //printf("O");
          output_low(PIN_B0);
@@ -37,21 +38,27 @@ void main(){
       }else{
          //printf("N");
          output_low(PIN_B1);
-         output_high(PIN_B0);
+         do{
+            output_toggle(PIN_B0);
+            delay_ms(1000);
+            distance = dist();
+            printf("%lu\r\n",distance);
+         }while(distance>limite);
       }
       // printf(":%ld\r\n",distance);
       char temp[10];
       int x;
       sprintf(temp, "%lu", distance);  //conversion du int32 en char
       //printf("test : %s\r\n", temp);
-      for(x=0;x<9;x++){  //boucle parcourant le char formé du int
+      /*for(x=0;x<9;x++){  //boucle parcourant le char formé du int
          if(temp[x] != '\0'){  //si la fin du nombre on break
-            printf("%c\r\n"temp[x]);  //envois un chiffre a la fois ;-)
+            printf("%c"temp[x]);  //envois un chiffre a la fois ;-)
+            delay_ms(200);
          }else{
             break;
          }
-      }
-      printf(":\r\n");  //signal de fin du chiffre
+      }*/
+      printf("%lu\r\n",distance);  //signal de fin du chiffre
       delay_ms(300);
    }
 }
@@ -73,3 +80,16 @@ int32 lecture(){
          return sorti;
 }
 
+int32 dist(){
+   float time=0;
+   int32 distance=0;
+   output_high(pin_b7); //debut impulsion sur le trigger de la sonde ultrasons
+   delay_us(10);
+   output_low(pin_b7);//fin impulsion
+   while(!input(PIN_b3));//tant que la pin b3 est a low
+   set_timer1(0);//mise a 0 du timer 1
+   while(input(PIN_b3));//tant que la pin b3 est a high
+   time=get_timer1();//recupération du timer
+   distance = time*17/100;//calcul de la distance
+   return distance;
+}
